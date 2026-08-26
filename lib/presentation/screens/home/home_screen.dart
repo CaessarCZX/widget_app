@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widget_app/config/menu/menu_items.dart';
-import 'package:widget_app/presentation/screens/buttons/buttons_screen.dart';
+import 'package:widget_app/presentation/screens/cards/cards_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+
+  static const String name = 'home_screen';
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +53,10 @@ class _CustomListTile extends StatelessWidget {
         //   MaterialPageRoute<void>(builder: (context) => const ButtonsScreen()),
         // );
         //Named routing
-        Navigator.pushNamed(context, menuItem.url);
+        // Navigator.pushNamed(context, menuItem.url);
+        //Go_router way
+        // context.pushNamed(CardsScreen.name); //In case you want direct to a named route in go_router
+        context.push(menuItem.url);
       },
     );
   }
