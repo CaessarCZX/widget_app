@@ -32,5 +32,10 @@ final router = GoRouter(
       name: SnackBarScreen.name,
       builder: (context, state) => SnackBarScreen(),
     ),
+    GoRoute(
+      path: Routes.animatedScreen,
+      name: AnimatedScreen.name,
+      builder: (context, state) => AnimatedScreen(),
+    ),
   ],
 );

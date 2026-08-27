@@ -40,4 +40,10 @@ const appMenuItems = <MenuItems>[
     url: Routes.snackBarScreen,
     icon: Icons.info_outline,
   ),
+  MenuItems(
+    title: 'Animated containes',
+    subtitle: 'Stateful Animated Container',
+    url: Routes.animatedScreen,
+    icon: Icons.check_box_outlined,
+  ),
 ];
