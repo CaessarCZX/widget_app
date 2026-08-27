@@ -37,5 +37,10 @@ final router = GoRouter(
       name: AnimatedScreen.name,
       builder: (context, state) => AnimatedScreen(),
     ),
+    GoRoute(
+      path: Routes.uiControlsScreen,
+      name: UiControlsScreen.name,
+      builder: (context, state) => UiControlsScreen(),
+    ),
   ],
 );
