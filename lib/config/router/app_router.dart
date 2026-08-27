@@ -22,5 +22,10 @@ final router = GoRouter(
       name: CardsScreen.name,
       builder: (context, state) => CardsScreen(),
     ),
+    GoRoute(
+      path: Routes.progress,
+      name: ProgressScreen.name,
+      builder: (context, state) => ProgressScreen(),
+    ),
   ],
 );
