@@ -58,4 +58,10 @@ const appMenuItems = <MenuItems>[
     url: Routes.appTutorialScreen,
     icon: Icons.accessibility_rounded,
   ),
+  MenuItems(
+    title: "Infinite Scroll and pull",
+    subtitle: "Infinite lists and pull to refresh",
+    url: Routes.infiniteScrollScreen,
+    icon: Icons.list_alt_rounded
+  ),
 ];

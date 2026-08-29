@@ -39,7 +39,6 @@ class SnackBarScreen extends StatelessWidget {
 }
 
 class _DialogView extends StatelessWidget {
-  const new({super.key});
 
   void openDialog(BuildContext context) {
     showDialog(
