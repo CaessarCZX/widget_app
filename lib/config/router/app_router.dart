@@ -52,5 +52,15 @@ final router = GoRouter(
       name: InfiniteScrollScreen.name,
       builder: (context, state) => InfiniteScrollScreen(),
     ),
+    GoRoute(
+      path: Routes.counterScreen,
+      name: CounterScreen.name,
+      builder: (context, state) => CounterScreen(),
+    ),
+    GoRoute(
+      path: Routes.themeChangerScreen,
+      name: ThemeChangerScreen.name,
+      builder: (context, state) => ThemeChangerScreen(),
+    ),
   ],
 );

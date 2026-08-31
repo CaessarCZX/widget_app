@@ -8,4 +8,6 @@ class Routes {
   static const String snackBarScreen = '/snackbar';
   static const String uiControlsScreen = '/ui_controls';
   static const String progress = '/progress';
+  static const String counterScreen = '/counter';
+  static const String themeChangerScreen = '/theme_changer';
 }

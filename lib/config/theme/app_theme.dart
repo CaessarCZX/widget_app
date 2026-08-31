@@ -16,8 +16,9 @@ final int maxRange = colors.length - 1;
 
 class AppTheme {
   final int selectedColor;
+  final bool isDarkTheme;
 
-  AppTheme({this.selectedColor = 0})
+  AppTheme({this.selectedColor = 0, this.isDarkTheme = false})
     : assert(
         selectedColor >= 0 && selectedColor <= maxRange,
         'Selected color should be from zero to $maxRange',
@@ -26,6 +27,7 @@ class AppTheme {
   ThemeData getTheme() => ThemeData(
     useMaterial3: true,
     colorSchemeSeed: colors[selectedColor],
+    brightness: isDarkTheme ? Brightness.dark : Brightness.light,
     appBarTheme: AppBarTheme(centerTitle: true),
   );
 }

@@ -17,6 +17,18 @@ class MenuItems {
 
 const appMenuItems = <MenuItems>[
   MenuItems(
+    title: "Counter + Riverpod",
+    subtitle: "Small test for riverpod in a counter",
+    url: Routes.counterScreen,
+    icon: Icons.data_array
+  ),
+  MenuItems(
+    title: "Theme changer",
+    subtitle: "Change theme of application",
+    url: Routes.themeChangerScreen,
+    icon: Icons.color_lens_outlined
+  ),
+  MenuItems(
     title: 'Buttons',
     subtitle: 'Miscellaneous buttons on flutter',
     url: Routes.buttonsScreen,
@@ -64,4 +76,5 @@ const appMenuItems = <MenuItems>[
     url: Routes.infiniteScrollScreen,
     icon: Icons.list_alt_rounded
   ),
+  
 ];
