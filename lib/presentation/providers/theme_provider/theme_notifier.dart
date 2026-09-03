@@ -14,30 +14,20 @@ List<Color> colorList(Ref ref) {
   return colors;
 }
 
-// Provider for current theme color
+// Provider for current Application's Theme Data
 @Riverpod(keepAlive: true)
-class SelectedColorNotifier extends _$SelectedColorNotifier {
+class ThemeNotifier extends _$ThemeNotifier {
   @override
-  int build() {
-    return 0;
+  AppTheme build() {
+    return AppTheme();
   }
 
-  void changeColor(int value) {
-    if (value <= 0 && value >= colors.length - 1) return;
-    state = value;
-  }
-}
-
-// Provider for current theme mode
-@riverpod
-@Riverpod(keepAlive: true)
-class IsDarkThemeNotifier extends _$IsDarkThemeNotifier {
-  @override
-  bool build() {
-    return false;
+  void toggleDarkMode() {
+    state = state.copyWith(isDarkTheme: !state.isDarkTheme);
   }
 
-  void changeTheme() {
-    state = !state;
+  void changeColorIndex(int colorIndex) {
+    if (colorIndex <= 0 && colorIndex >= colors.length - 1) return;
+    state = state.copyWith(selectedColor: colorIndex);
   }
 }

@@ -30,4 +30,9 @@ class AppTheme {
     brightness: isDarkTheme ? Brightness.dark : Brightness.light,
     appBarTheme: AppBarTheme(centerTitle: true),
   );
+
+  AppTheme copyWith({int? selectedColor, bool? isDarkTheme}) => AppTheme(
+    selectedColor: selectedColor ?? this.selectedColor,
+    isDarkTheme: isDarkTheme ?? this.isDarkTheme,
+  );
 }

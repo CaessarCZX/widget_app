@@ -50,105 +50,51 @@ final class ColorListProvider
 
 String _$colorListHash() => r'bf0ffed8b5f598c5b161be397e0e452498980375';
 
-@ProviderFor(SelectedColorNotifier)
-final selectedColorProvider = SelectedColorNotifierProvider._();
+@ProviderFor(ThemeNotifier)
+final themeProvider = ThemeNotifierProvider._();
 
-final class SelectedColorNotifierProvider
-    extends $NotifierProvider<SelectedColorNotifier, int> {
-  SelectedColorNotifierProvider._()
+final class ThemeNotifierProvider
+    extends $NotifierProvider<ThemeNotifier, AppTheme> {
+  ThemeNotifierProvider._()
     : super(
         from: null,
         argument: null,
         retry: null,
-        name: r'selectedColorProvider',
+        name: r'themeProvider',
         isAutoDispose: false,
         dependencies: null,
         $allTransitiveDependencies: null,
       );
 
   @override
-  String debugGetCreateSourceHash() => _$selectedColorNotifierHash();
+  String debugGetCreateSourceHash() => _$themeNotifierHash();
 
   @$internal
   @override
-  SelectedColorNotifier create() => SelectedColorNotifier();
+  ThemeNotifier create() => ThemeNotifier();
 
   /// {@macro riverpod.override_with_value}
-  Override overrideWithValue(int value) {
+  Override overrideWithValue(AppTheme value) {
     return $ProviderOverride(
       origin: this,
-      providerOverride: $SyncValueProvider<int>(value),
+      providerOverride: $SyncValueProvider<AppTheme>(value),
     );
   }
 }
 
-String _$selectedColorNotifierHash() =>
-    r'e534ea9ecaf12bfb25ed4ee633c89c91ccb202b7';
+String _$themeNotifierHash() => r'5f5effd803d7347b07f64e687eba4f6501a265a9';
 
-abstract class _$SelectedColorNotifier extends $Notifier<int> {
-  int build();
+abstract class _$ThemeNotifier extends $Notifier<AppTheme> {
+  AppTheme build();
   @$mustCallSuper
   @override
   WhenComplete runBuild() {
-    final ref = this.ref as $Ref<int, int>;
+    final ref = this.ref as $Ref<AppTheme, AppTheme>;
     final element =
         ref.element
             as $ClassProviderElement<
-              AnyNotifier<int, int>,
-              int,
-              Object?,
-              Object?
-            >;
-    return element.handleCreate(ref, build);
-  }
-}
-
-@ProviderFor(IsDarkThemeNotifier)
-final isDarkThemeProvider = IsDarkThemeNotifierProvider._();
-
-final class IsDarkThemeNotifierProvider
-    extends $NotifierProvider<IsDarkThemeNotifier, bool> {
-  IsDarkThemeNotifierProvider._()
-    : super(
-        from: null,
-        argument: null,
-        retry: null,
-        name: r'isDarkThemeProvider',
-        isAutoDispose: true,
-        dependencies: null,
-        $allTransitiveDependencies: null,
-      );
-
-  @override
-  String debugGetCreateSourceHash() => _$isDarkThemeNotifierHash();
-
-  @$internal
-  @override
-  IsDarkThemeNotifier create() => IsDarkThemeNotifier();
-
-  /// {@macro riverpod.override_with_value}
-  Override overrideWithValue(bool value) {
-    return $ProviderOverride(
-      origin: this,
-      providerOverride: $SyncValueProvider<bool>(value),
-    );
-  }
-}
-
-String _$isDarkThemeNotifierHash() =>
-    r'c58ef252da2de32630a02702fe705199ed76fcbb';
-
-abstract class _$IsDarkThemeNotifier extends $Notifier<bool> {
-  bool build();
-  @$mustCallSuper
-  @override
-  WhenComplete runBuild() {
-    final ref = this.ref as $Ref<bool, bool>;
-    final element =
-        ref.element
-            as $ClassProviderElement<
-              AnyNotifier<bool, bool>,
-              bool,
+              AnyNotifier<AppTheme, AppTheme>,
+              AppTheme,
               Object?,
               Object?
             >;
